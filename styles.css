@@ -132,40 +132,53 @@ h1 {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0;
     padding: 0;
     animation: fadeIn 2s ease-in-out;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    animation: floatingLink 3s infinite ease-in-out;
+    border-radius: 30px;
 }
 
 /* Hover Effect for Links */
 nav ul li a:hover,
 nav ul li a:focus {
     background-color: #45a049;
-    border-radius: 5px;
-    transform: scale(1.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
 }
 
-/* Floating Link Animation */
-@keyframes floatingLink {
-    0%, 100% {
-        transform: translateY(0);
+/* Navigation Items (Responsiveness) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #4CAF50;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
     }
-    50% {
-        transform: translateY(-5px);
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 15px 20px;
+        font-size: 1rem;
+        display: block;
+        text-align: center;
     }
 }
 
