@@ -1,0 +1,383 @@
+/* General Body and Background */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+    animation: backgroundPulse 5s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundPulse {
+    0% {
+        background-color: #f0f8ff;
+    }
+    100% {
+        background-color: #e6f7ff;
+    }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+/* Header Animation */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Logo */
+.logo {
+    height: 120px;
+    width: 120px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 255, 0, 0.5);
+    animation: logoPulse 1.5s infinite alternate ease-in-out, rotateLogo 5s linear infinite;
+    will-change: transform, box-shadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Pulse Animation for Logo */
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Rotation Animation for Logo */
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Inner Circle (Icon Placeholder) */
+.logo::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
+/* Logo Hover Effect */
+.logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 35px rgba(0, 255, 0, 0.6);
+}
+
+/* Main Title */
+h1 {
+    display: inline-block;
+    color: #fff;
+    margin: 0;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out, textWave 3s infinite ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Text Wave Animation */
+@keyframes textWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: floatingLink 3s infinite ease-in-out;
+}
+
+/* Hover Effect for Links */
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #45a049;
+    border-radius: 5px;
+    transform: scale(1.2);
+}
+
+/* Floating Link Animation */
+@keyframes floatingLink {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    animation: zoomIn 1.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; /* Ensure sections fill the entire viewport height */
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Section Title (h2) */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    animation: pulse 1.5s infinite alternate ease-in-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Paragraph Text */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 auto 20px;
+    max-width: 800px;
+    animation: slideIn 1.5s forwards;
+    opacity: 0;
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* List Items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    animation: listItemFade 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Delayed Animation for List Items */
+ul li:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+ul li:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+/* List Item Fade Animation */
+@keyframes listItemFade {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Deity Image */
+.deity-picture {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    animation: float 3s ease-in-out infinite, glow 2s infinite alternate ease-in-out, scaleUp 2s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #4CAF50;
+    }
+    100% {
+        box-shadow: 0 0 25px #45a049;
+    }
+}
+
+/* Scale Up Animation */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Contact Form Input */
+.contact-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contact Form Input Focus */
+.contact-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+    outline: none;
+}
+
+/* Contact Button */
+.contact-button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: buttonBounce 2s infinite;
+}
+
+/* Button Hover/Focus */
+.contact-button:hover,
+.contact-button:focus {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Button Bounce Animation */
+@keyframes buttonBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    section {
+        padding: 50px 10px; /* Reduced padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller font size for better visibility */
+    }
+
+    .logo {
+        height: 80px; /* Adjust logo size */
+        width: 80px;
+    }
+}
