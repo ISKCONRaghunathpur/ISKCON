@@ -346,72 +346,87 @@ ul li:nth-child(even) {
 /* Contact Form Input Focus */
 .contact-input:focus {
     border-color: #4CAF50;
-    box-shadow: 0 0 5px #4CAF50;
-    outline: none;
+    box-shadow: 0 0 10px rgba(72, 162, 72, 0.8);
 }
 
 /* Contact Button */
 .contact-button {
-    padding: 15px 30px;
+    padding: 12px 25px;
     background-color: #4CAF50;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    animation: buttonBounce 2s infinite;
 }
 
-/* Button Hover/Focus */
-.contact-button:hover,
-.contact-button:focus {
+/* Hover Effect for Contact Button */
+.contact-button:hover {
     background-color: #45a049;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
 }
 
-/* Button Bounce Animation */
-@keyframes buttonBounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    section {
-        padding: 50px 10px; /* Reduced padding for smaller screens */
-    }
-
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+    /* Adjusting font size for small screens */
     h1 {
-        font-size: 2rem; /* Smaller font size for better visibility */
+        font-size: 2rem;
     }
 
-    .logo {
-        height: 80px; /* Adjust logo size */
-        width: 80px;
+    h2 {
+        font-size: 1.8rem;
     }
 
-    /* Responsive Navigation */
+    p {
+        font-size: 1rem;
+    }
+
+    /* Reduce padding and margins for smaller screens */
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Make images responsive */
+    .deity-picture {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust form inputs and button sizes */
+    .contact-input {
+        padding: 8px;
+    }
+
+    .contact-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    /* Navbar adjustments */
     nav ul {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
+        flex-direction: column;
         padding: 10px 0;
-        background-color: #4CAF50; /* Background for better visibility */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
     }
 
     nav ul li {
-        margin: 10px 0; /* Add spacing between items */
+        margin: 8px 0;
     }
 
-    nav ul li a {
-        padding: 15px 20px; /* Increase tappable area */
-        font-size: 1rem; /* Adjust font size for readability */
-        display: block; /* Ensure links span the full width */
-        text-align: center; /* Center align text */
+    /* Decrease logo size */
+    .logo {
+        height: 80px;
+        width: 80px;
     }
 }
