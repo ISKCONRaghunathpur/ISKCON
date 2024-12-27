@@ -349,35 +349,44 @@ ul li:nth-child(even) {
     animation: buttonBounce 2s infinite;
 }
 
-/* Button Hover/Focus */
-.contact-button:hover,
-.contact-button:focus {
+/* Button Hover/Focus Effect */
+.contact-button:hover {
     background-color: #45a049;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Button Bounce Animation */
+/* Button Animation */
 @keyframes buttonBounce {
-    0%, 100% {
+    0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    section {
-        padding: 50px 10px; /* Reduced padding for smaller screens */
-    }
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
 
-    h1 {
-        font-size: 2rem; /* Smaller font size for better visibility */
-    }
+/* Footer Links */
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
 
-    .logo {
-        height: 80px; /* Adjust logo size */
-        width: 80px;
-    }
+/* Footer Links Hover */
+footer a:hover {
+    color: #fff;
 }
