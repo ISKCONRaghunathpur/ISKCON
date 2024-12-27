@@ -368,32 +368,35 @@ ul li:nth-child(even) {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    /* Adjust section padding */
     section {
-        padding: 50px 10px; /* Reduced padding for smaller screens */
+        padding: 40px 10px;
     }
 
+    /* Adjust font size for mobile */
     h1 {
-        font-size: 2rem; /* Smaller font size for better visibility */
+        font-size: 1.8rem;
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Adjust logo size for mobile */
     .logo {
-        height: 80px; /* Adjust logo size */
+        height: 80px;
         width: 80px;
     }
 
-    /* Collapsible Navigation */
+    /* Stack navigation links vertically */
     nav ul {
         flex-direction: column;
         align-items: center;
         display: none;
-        width: 100%;
-        padding: 0;
     }
 
     nav ul li {
         margin: 10px 0;
-        text-align: center;
-        width: 100%;
     }
 
     nav ul.active {
@@ -407,7 +410,7 @@ ul li:nth-child(even) {
         color: #fff;
     }
 
-    /* Ensuring Input & Button Responsiveness */
+    /* Ensure Input & Button Responsiveness */
     .contact-input,
     .contact-button {
         width: 100%;
