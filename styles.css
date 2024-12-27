@@ -390,3 +390,47 @@ footer a {
 footer a:hover {
     color: #fff;
 }
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    /* Logo adjustments */
+    .logo {
+        height: 80px;
+        width: 80px;
+    }
+
+    /* Main Title Font Size */
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Navigation menu adjustments */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    /* Contact Form Adjustments */
+    .contact-input, .contact-button {
+        width: 100%;
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Footer padding */
+    footer {
+        padding: 10px 0;
+    }
+}
