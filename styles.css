@@ -8,6 +8,7 @@ body {
     animation: backgroundPulse 5s infinite alternate ease-in-out;
 }
 
+/* Background Pulse Animation */
 @keyframes backgroundPulse {
     0% {
         background-color: #f0f8ff;
@@ -349,88 +350,45 @@ ul li:nth-child(even) {
     animation: buttonBounce 2s infinite;
 }
 
-/* Button Hover/Focus Effect */
-.contact-button:hover {
+/* Button Hover/Focus */
+.contact-button:hover,
+.contact-button:focus {
     background-color: #45a049;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-/* Button Animation */
+/* Button Bounce Animation */
 @keyframes buttonBounce {
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
+        transform: translateY(-5px);
     }
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    animation: fadeIn 2s ease-in-out;
-}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    section {
+        padding: 50px 10px; /* Reduced padding for smaller screens */
+    }
 
-/* Footer Links */
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
+    h1 {
+        font-size: 2rem; /* Smaller font size for better visibility */
+    }
 
-/* Footer Links Hover */
-footer a:hover {
-    color: #fff;
-}
-
-/* Media Queries for Mobile */
-@media screen and (max-width: 768px) {
-    /* Logo adjustments */
     .logo {
-        height: 80px;
+        height: 80px; /* Adjust logo size */
         width: 80px;
     }
 
-    /* Main Title Font Size */
-    h1 {
-        font-size: 2rem;
-    }
-
-    /* Navigation menu adjustments */
+    /* Adjust nav links */
     nav ul {
         flex-direction: column;
         align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-
-    /* Contact Form Adjustments */
-    .contact-input, .contact-button {
-        width: 100%;
-    }
-
-    /* Section adjustments */
-    section {
-        padding: 40px 20px;
-    }
-
-    /* Footer padding */
-    footer {
-        padding: 10px 0;
+        margin-bottom: 10px;
     }
 }
