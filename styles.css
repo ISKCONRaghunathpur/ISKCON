@@ -1,181 +1,51 @@
+
 /* General Body and Background */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #f0f8ff 20%, #e0f7fa 100%);
+    background-color: #f0f8ff;
     animation: backgroundPulse 5s infinite alternate ease-in-out;
-    color: #333;
-    line-height: 1.6;
-    font-size: 1rem;
-    transition: background 0.3s ease, color 0.3s ease;
-    overflow-x: hidden;  /* Prevent horizontal scroll */
-    position: relative;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Background Pulse Animation */
 @keyframes backgroundPulse {
     0% {
-        background: linear-gradient(135deg, #f0f8ff 20%, #e0f7fa 100%);
+        background-color: #f0f8ff;
     }
     100% {
-        background: linear-gradient(135deg, #e0f7fa 20%, #f0f8ff 100%);
+        background-color: #e6f7ff;
     }
 }
 
-/* Text Shadow for depth */
-body {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* Hover Effect on Links */
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Responsive Body Adjustments for Smaller Screens */
-@media (max-width: 768px) {
-    body {
-        font-size: 1.1rem;  /* Slightly increase font size on small screens */
-    }
-}
-@keyframes backgroundPulse {
-    0% {
-        background-color: #f0f8ff;  /* Light cyan */
-    }
-    50% {
-        background-color: #e6f7ff;  /* Slightly deeper cyan */
-    }
-    100% {
-        background-color: #f0f8ff;  /* Return to light cyan */
-    }
-}
 /* Container */
 .container {
-    max-width: 1200px;        /* Maximum width for larger screens */
-    width: 100%;              /* Make it responsive on smaller screens */
-    margin: 0 auto;           /* Center the container */
-    padding: 0 15px;          /* Add side padding for smaller screens */
-    box-sizing: border-box;   /* Ensure padding is included in width calculation */
-    background-color: #ffffff; /* Optional: Set a background color */
-    border-radius: 10px;      /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Media Query for Smaller Devices */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 10px;       /* Reduce padding on smaller screens */
-    }
-}
-
-/* Media Query for Extra Small Devices */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 5px;        /* Further reduce padding on small screens */
-    }
-}
 /* Header */
 header {
-    background: linear-gradient(135deg, #4CAF50, #81C784); /* Gradient background */
-    padding: 25px 0;            /* Adjust padding for a more spacious look */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: sticky;           /* Make the header sticky */
-    top: 0;                     /* Stay at the top of the page */
-    z-index: 1000;              /* Ensure it stays above other content */
-    animation: slideInFromTop 1s ease-in-out; /* Smooth sliding animation */
-    font-family: 'Roboto', sans-serif; /* Font style */
-    text-align: center;         /* Center the text inside the header */
-    color: white;               /* Text color for better contrast */
-    letter-spacing: 1px;        /* Slight letter spacing for a clean look */
+    background-color: #4CAF50;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: slideInFromTop 1s ease-in-out;
 }
 
-/* Animation Keyframe for Sliding In from Top */
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%); /* Start off-screen */
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);      /* Slide in to its position */
-        opacity: 1;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0;             /* Adjust padding for mobile devices */
-        font-size: 1.2rem;           /* Adjust font size for readability */
-    }
-}
-
-/* Media Query for Extra Small Devices */
-@media (max-width: 480px) {
-    header {
-        padding: 10px 0;             /* Further reduce padding */
-        font-size: 1rem;             /* Reduce font size for smaller screens */
-    }
-}
 /* Header Animation */
 @keyframes slideInFromTop {
     0% {
-        transform: translateY(-100%) rotateX(-15deg);  /* Slide in with a slight rotation for added dynamic feel */
+        transform: translateY(-100%);
         opacity: 0;
     }
-    50% {
-        transform: translateY(10%) rotateX(5deg);     /* Slight bounce effect */
-        opacity: 0.6;                                 /* Fade in gradually */
-    }
     100% {
-        transform: translateY(0) rotateX(0);           /* Final position */
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
-/* Applying the Animation to Header */
-header {
-    background: linear-gradient(135deg, #4CAF50, #81C784); /* Gradient background */
-    padding: 25px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    animation: slideInFromTop 1s ease-out; /* Animation with a smooth easing */
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    color: white;
-    letter-spacing: 1px;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px 0;
-        font-size: 1rem;
-    }
-}
 /* Logo */
 .logo {
     height: 120px;
@@ -186,105 +56,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 25px rgba(0, 255, 0, 0.3);
-    animation: logoPulse 1.5s infinite ease-in-out, rotateLogo 5s linear infinite;
-    will-change: transform, box-shadow;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-}
-
-
-/* Logo Animation */
-@keyframes logoPulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 255, 0, 0.5);
-    }
-    100% {
-        transform: scale(1.05); /* Slight scaling effect for pulse */
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 255, 0, 0.7);
-    }
-}
-
-@keyframes rotateLogo {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Hover Effect */
-.logo:hover {
-    transform: rotate(10deg) scale(1.1); /* Slight tilt and scaling on hover */
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.8); /* More intense glow effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Adding logo content like text or icon */
-.logo i {
-    font-size: 2rem; /* Icon size */
-    color: white;
-    animation: iconPulse 2s infinite ease-in-out; /* Pulsing effect for icon */
-}
-
-@keyframes iconPulse {
-    0% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* Pulse Animation for Logo */
-@keyframes logoPulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.8; /* Slight opacity decrease */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 25px rgba(0, 255, 0, 0.3); /* Subtle glow */
-    }
-    50% {
-        transform: scale(1.1); /* Slightly larger scale at the peak */
-        opacity: 1; /* Full opacity */
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 0 35px rgba(0, 255, 0, 0.5); /* Stronger glow */
-    }
-}
-/* Rotation Animation for Logo */
-@keyframes rotateLogo {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-/* Inner Circle (Icon Placeholder) */
-.logo::before {
-    content: '';
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1; /* Ensure it appears above other elements */
-}
-
-/* Logo Enhancement: Ensure the inner circle stays centered */
-.logo {
-    position: relative;
-    height: 120px;
-    width: 120px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #4CAF50, #45a049);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 25px rgba(0, 255, 0, 0.3);
-    animation: logoPulse 1.5s infinite ease-in-out, rotateLogo 5s linear infinite;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 255, 0, 0.5);
+    animation: logoPulse 1.5s infinite alternate ease-in-out, rotateLogo 5s linear infinite;
     will-change: transform, box-shadow;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -309,90 +82,25 @@ header {
         transform: rotate(360deg);
     }
 }
+
+/* Inner Circle (Icon Placeholder) */
+.logo::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
 /* Logo Hover Effect */
 .logo:hover {
-    transform: scale(1.1); /* Slightly more noticeable scaling */
+    transform: scale(1.05);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 35px rgba(0, 255, 0, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
 }
-/* Hover Effect for Inner Circle */
-.logo:hover::before {
-    transform: scale(1.05); /* Slight scale effect for the inner circle */
-    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 255, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 /* Main Title */
-h1 {
-    display: inline-block;
-    color: #fff;
-    margin: 0;
-    font-size: 3rem; /* Adjusted size for better visibility */
-    font-weight: 700; /* Make the title bolder */
-    animation: fadeIn 2s ease-in-out, textWave 3s infinite ease-in-out, colorShift 5s infinite alternate;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Added subtle shadow for text depth */
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Text Wave Animation */
-@keyframes textWave {
-    0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-10px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Color Shift Animation */
-@keyframes colorShift {
-    0% {
-        color: #fff;
-    }
-    50% {
-        color: #4CAF50; /* Green */
-    }
-    100% {
-        color: #fff;
-    }
-}
-/* Fade In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.9); /* Starting with a slight scale for a more dynamic effect */
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1); /* Ending at normal scale */
-    }
-}
-/* Text Wave Animation */
-@keyframes textWave {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-10px) rotate(-5deg); /* Adding slight rotation */
-    }
-}
 h1 {
     display: inline-block;
     color: #fff;
@@ -400,6 +108,27 @@ h1 {
     font-size: 2.5rem;
     animation: fadeIn 2s ease-in-out, textWave 3s infinite ease-in-out;
 }
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Text Wave Animation */
+@keyframes textWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 /* Navigation Menu */
 nav ul {
     list-style: none;
@@ -412,334 +141,108 @@ nav ul {
 
 nav ul li {
     margin: 0 10px;
-    position: relative; /* To position pseudo-elements */
 }
 
-/* Floating Link Animation */
 nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     animation: floatingLink 3s infinite ease-in-out;
-    position: relative;
-    z-index: 1; /* Ensure text is above the pseudo-elements */
 }
 
-/* Hover Effect */
-nav ul li a:hover {
-    background-color: #4CAF50;
-    transform: translateY(-5px);
-    color: #000;
-}
-
-nav ul li a:focus {
-    outline: none;
-    background-color: #45a049;
-    transform: translateY(-3px);
-}
-
-/* Underline Animation */
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #4CAF50;
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* Floating Link Animation */
-@keyframes floatingLink {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
 /* Hover Effect for Links */
 nav ul li a:hover,
 nav ul li a:focus {
     background-color: #45a049;
     border-radius: 5px;
-    transform: scale(1.1); /* Slightly smaller scaling for smoother feel */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    color: #fff; /* Ensure text color stays readable */
+    transform: scale(1.2);
 }
+
 /* Floating Link Animation */
 @keyframes floatingLink {
     0%, 100% {
-        transform: translateY(0); /* Starts and ends at the normal position */
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-8px); /* Increased the distance for more noticeable effect */
+        transform: translateY(-5px);
     }
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    animation: floatingLink 3s ease-in-out infinite; /* Apply the floating animation */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    animation-delay: calc(0.1s * var(--i)); /* Stagger the animation */
-}
-
-nav ul li:nth-child(1) a {
-    --i: 1;
-}
-nav ul li:nth-child(2) a {
-    --i: 2;
-}
-nav ul li:nth-child(3) a {
-    --i: 3;
-}
-nav ul li:nth-child(4) a {
-    --i: 4;
-}
 /* Section Styles */
 section {
-    padding: 60px 20px;
+    padding: 60px 0;
     text-align: center;
-    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Subtle gradient background */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer and slightly larger shadow */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    border-radius: 12px; /* Slightly rounded corners */
-    animation: zoomIn 1.8s ease-out, fadeInSection 1.5s ease-out; /* Added fade-in effect for extra dynamism */
+    border-radius: 10px;
+    animation: zoomIn 1.5s ease-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh; /* Ensure sections fill the entire viewport height */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Animation for section fade-in */
-@keyframes fadeInSection {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hover Effect for Section */
-section:hover {
-    transform: translateY(-5px); /* Lifts the section slightly on hover */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow for hover effect */
-}
 /* Zoom In Animation */
 @keyframes zoomIn {
     0% {
-        transform: scale(0.9); /* Slightly larger initial scale for a more dramatic effect */
+        transform: scale(0.8);
         opacity: 0;
-    }
-    50% {
-        transform: scale(1.05); /* Add a slight zoom-in midway for added impact */
     }
     100% {
         transform: scale(1);
         opacity: 1;
     }
 }
+
 /* Section Title (h2) */
 h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
-    animation: pulse 1.5s infinite alternate ease-in-out, colorChange 4s infinite alternate ease-in-out;
-    text-transform: uppercase; /* Adding a stylish uppercase effect */
-    letter-spacing: 1px; /* Slight letter spacing for a cleaner look */
-    font-weight: 600; /* Slightly bolder for emphasis */
+    animation: pulse 1.5s infinite alternate ease-in-out;
 }
-/* Color Change Animation */
-@keyframes colorChange {
+
+/* Pulse Animation */
+@keyframes pulse {
     0% {
-        color: #333; /* Original color */
-    }
-    50% {
-        color: #4CAF50; /* Green accent for a vibrant effect */
+        transform: scale(1);
     }
     100% {
-        color: #333; /* Return to the original color */
+        transform: scale(1.05);
     }
 }
-/* Enhanced Pulse Animation with Rotation and Color Transition */
-@keyframes pulse {/* Paragraph Text */
+
+/* Paragraph Text */
 p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #444;
     margin: 0 auto 20px;
     max-width: 800px;
-    animation: slideIn 1.5s forwards, fadeInText 2s ease-in-out;
+    animation: slideIn 1.5s forwards;
     opacity: 0;
-    transform: translateY(20px); /* Start slightly below */
 }
 
 /* Slide In Animation */
 @keyframes slideIn {
-    0% {
-        transform: translateY(20px); /* Start below */
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0); /* End at normal position */
-        opacity: 1; /* Fully visible */
-    }
-}
-
-/* Fade In Text Effect */
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-        filter: blur(5px); /* Start with blur */
-    }
-    100% {
-        opacity: 1;
-        filter: blur(0); /* End with no blur */
-    }
-}
-
-    0% {
-        transform: scale(1) rotate(0deg); /* Original size and no rotation */
-        color: #333; /* Base color */
-    }
-    50% {
-        transform: scale(1.1) rotate(5deg); /* Slightly larger and rotated */
-        color: #4CAF50; /* Vibrant green color */
-    }
-    100% {
-        transform: scale(1) rotate(0deg); /* Return to original size and no rotation */
-        color: #333; /* Original color */
-    }
-}
-/* Slide In Animation */
-@keyframes slideIn {
-    0% {
-        transform: translateX(-50%); /* Start from the left side */
-        opacity: 0; /* Invisible at the start */
-    }
-    100% {
-        transform: translateX(0); /* End at the normal position */
-        opacity: 1; /* Fully visible */
-    }
-}
-
-/* Applying to the paragraph */
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #444;
-    margin: 0 auto 20px;
-    max-width: 800px;
-    animation: slideIn 1.5s ease-out forwards; /* Apply animation */
-    opacity: 0; /* Start invisible */
-}
-/* List Items */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-    animation: listItemFade 1s ease-out forwards;
-    opacity: 0; /* Start invisible */
-}
-
-/* Fade In Animation for List Items */
-@keyframes listItemFade {
-    0% {
-        opacity: 0; /* Invisible at start */
-        transform: translateX(-20px); /* Start slightly to the left */
-    }
-    100% {
-        opacity: 1; /* Fully visible */
-        transform: translateX(0); /* Move to normal position */
-    }
-}
-
-/* Staggered Delay for List Items */
-ul li:nth-child(1) {
-    animation-delay: 0s; /* First item appears immediately */
-}
-
-ul li:nth-child(2) {
-    animation-delay: 0.2s; /* Second item appears after 0.2s */
-}
-
-ul li:nth-child(3) {
-    animation-delay: 0.4s; /* Third item appears after 0.4s */
-}
-
-/* Add more items if necessary with increasing delay */
-/* List Items */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-    animation: listItemFade 1s ease-out forwards;
-    opacity: 0; /* Start invisible */
-}
-
-/* Fade In Animation for List Items */
-@keyframes listItemFade {
-    0% {
-        opacity: 0; /* Invisible at start */
-        transform: translateX(-20px); /* Start slightly to the left */
-    }
-    100% {
-        opacity: 1; /* Fully visible */
-        transform: translateX(0); /* Move to normal position */
-    }
-}
-
-/* Delayed Animation for Odd List Items */
-ul li:nth-child(odd) {
-    animation-delay: 0.2s; /* Odd items appear after 0.2s */
-}
-
-/* Delayed Animation for Even List Items */
-ul li:nth-child(even) {
-    animation-delay: 0.4s; /* Even items appear after 0.4s */
-}
-/* List Item Fade Animation */
-@keyframes listItemFade {
     from {
-        opacity: 0;
-        transform: translateX(-20px); /* Start slightly off-screen to the left */
+        transform: translateX(-50%);
     }
     to {
-        opacity: 1; /* Fade in */
-        transform: translateX(0); /* Move to normal position */
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
-/* Apply the animation to list items with a delay for each */
+/* List Items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 ul li {
     font-size: 1.2rem;
     color: #444;
@@ -747,18 +250,30 @@ ul li {
     padding-left: 20px;
     position: relative;
     animation: listItemFade 1s ease-out forwards;
-    opacity: 0; /* Make sure the list items start as invisible */
+    opacity: 0;
 }
 
-/* Delayed Animation for Odd List Items */
+/* Delayed Animation for List Items */
 ul li:nth-child(odd) {
     animation-delay: 0.2s;
 }
 
-/* Delayed Animation for Even List Items */
 ul li:nth-child(even) {
     animation-delay: 0.4s;
 }
+
+/* List Item Fade Animation */
+@keyframes listItemFade {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Deity Image */
 .deity-picture {
     width: 100%;
@@ -766,138 +281,63 @@ ul li:nth-child(even) {
     margin-top: 20px;
     border-radius: 10px;
     animation: float 3s ease-in-out infinite, glow 2s infinite alternate ease-in-out, scaleUp 2s ease-in-out infinite;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    will-change: transform, filter, box-shadow; /* Optimizing for better performance */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Image */
-.deity-picture:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-    filter: brightness(1.2); /* Slightly brighten the image on hover */
-}
-
-/* Float Animation */
+/* Floating Animation */
 @keyframes float {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-10px);
     }
     100% {
         transform: translateY(0);
     }
 }
 
-/* Glow Animation */
+/* Glowing Effect */
 @keyframes glow {
     0% {
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 10px #4CAF50;
     }
     100% {
-        box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+        box-shadow: 0 0 25px #45a049;
     }
 }
 
 /* Scale Up Animation */
 @keyframes scaleUp {
-    0%, 100% {
+    0% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.05);
     }
-}
-/* Floating Animation */
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(3deg); /* Add slight rotation */
-    }
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-}
-/* Glowing Effect */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 15px #4CAF50, 0 0 30px #45a049;
-    }
-    50% {
-        box-shadow: 0 0 25px #76d76d, 0 0 50px #66bb6a; /* Light green glow */
-    }
-    100% {
-        box-shadow: 0 0 35px #81c784, 0 0 60px #66bb6a; /* Softer green glow */
-    }
-}
-/* Enhanced Scale Up Animation */
-@keyframes scaleUp {
-    0% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.1);
-    }
-    50% {
-        transform: scale(1.15); /* Increased scale at peak */
-    }
-    75% {
-        transform: scale(1.1);
-    }
     100% {
         transform: scale(1);
     }
 }
+
 /* Contact Form Input */
 .contact-input {
     width: 100%;
     max-width: 600px;
-    padding: 12px;
+    padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
-.contact-input:hover {
-    border-color: #45a049;
-    background-color: #eef9ea;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Focus Effect */
-.contact-input:focus {
-    border-color: #4CAF50;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
-    outline: none; /* Remove default outline */
-}
-
-/* Input Placeholder Styling */
-.contact-input::placeholder {
-    color: #888;
-    font-style: italic;
-    transition: color 0.3s ease;
-}
-
-/* Focused Placeholder */
-.contact-input:focus::placeholder {
-    color: #4CAF50;
-}
 /* Contact Form Input Focus */
 .contact-input:focus {
     border-color: #4CAF50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6); /* Slightly larger shadow for emphasis */
-    outline: none; /* Remove default outline */
-    background-color: #f2fdf2; /* Light green background on focus */
-    transition: all 0.3s ease; /* Smooth transition for all properties */
+    box-shadow: 0 0 5px #4CAF50;
+    outline: none;
 }
+
 /* Contact Button */
 .contact-button {
     padding: 15px 30px;
@@ -906,226 +346,15 @@ ul li:nth-child(even) {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Applies transition to all properties */
-    animation: buttonBounce 2s infinite ease-in-out;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: buttonBounce 2s infinite;
 }
 
-/* Button Hover Effect */
-.contact-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
-}
-
-/* Button Active (Clicked) Effect */
-.contact-button:active {
-    background-color: #388e3c; /* Even darker green on click */
-    transform: translateY(0); /* Return to original position */
-}
-
-/* Bounce Animation for Button */
-@keyframes buttonBounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px); /* Bounce effect */
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 /* Button Hover/Focus */
 .contact-button:hover,
 .contact-button:focus {
-    background-color: #45a049; /* Green background on hover/focus */
-    transform: scale(1.1); /* Slightly larger size on hover/focus */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover/focus */
-    outline: none; /* Remove default outline on focus */
-    transition: all 0.3s ease-in-out; /* Smooth transition for all effects */
-}
-/* Button Bounce Animation */
-@keyframes buttonBounce {
-    0%, 100% {
-        transform: translateY(0); /* Start and end at the normal position */
-    }
-    50% {
-        transform: translateY(-8px); /* Bounce slightly higher for a more noticeable effect */
-    }
-}
-/* ========== General Styles ========== */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif; /* Using a modern, clean font */
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6; /* Better readability */
-    -webkit-font-smoothing: antialiased; /* Smooth fonts on webkit browsers */
-    -moz-osx-font-smoothing: grayscale; /* Font smoothing on Firefox */
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box; /* Ensures padding doesn't add to element size */
-}
-
-html {
-    scroll-behavior: smooth; /* Smooth scrolling on anchor links */
-    font-size: 16px; /* Base font size */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    color: #444;
-    font-weight: bold;
-}
-
-/* Responsive Text Sizing */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Adjust text size for smaller screens */
-    }
-}
-/* ========== Header Styles ========== */
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    color: #333;
-    font-weight: 700; /* Bold weight for emphasis */
-    line-height: 1.2; /* Increased line height for better readability */
-    animation: fadeIn 2s ease-in-out;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Soft text shadow for depth */
-}
-
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #666;
-    font-weight: 400; /* Normal weight */
-    line-height: 1.4; /* Improved readability */
-    animation: fadeIn 3s ease-in-out;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
-}
-
-/* Header Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px); /* Slide in effect */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Header Styles */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem; /* Further adjust for very small screens */
-    }
-
-    h2 {
-        font-size: 1.2rem; /* Further adjust for very small screens */
-    }
-}
-/* ========== Button Styles ========== */
-.contact-button {
-    display: inline-block;
-    padding: 12px 24px; /* Slightly increased padding for better touch targets */
-    font-size: 1.1rem; /* Increased font size for better readability */
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
-    animation: scaleEffect 3s infinite;
-    font-weight: 600; /* Slightly bolder text for emphasis */
-    letter-spacing: 1px; /* Added letter spacing for better readability */
-    position: relative; /* For position adjustment when hovering */
-}
-
-.contact-button:hover {
+    background-color: #45a049;
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.contact-button:focus {
-    outline: none; /* Removes default focus outline */
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* Adds focus outline with blue glow */
-}
-
-/* Scale Effect Animation */
-@keyframes scaleEffect {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Responsive Button */
-@media (max-width: 768px) {
-    .contact-button {
-        font-size: 1rem; /* Adjust font size on smaller screens */
-        padding: 10px 20px; /* Adjust padding on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-button {
-        font-size: 0.9rem; /* Further reduce font size for very small screens */
-        padding: 8px 18px; /* Further reduce padding for very small screens */
-    }
-}
-/* ========== Keyframes for Animations ========== */
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px); /* Slightly moves the element upward during fade-in */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Brings the element to its original position */
-    }
-}
-
-/* Scale Effect Animation */
-@keyframes scaleEffect {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
 }
 
 /* Button Bounce Animation */
@@ -1138,204 +367,62 @@ h2 {
     }
 }
 
-/* Add Glow Effect on Hover (for visual enhancement) */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px rgba(72, 167, 219, 0.5); /* Soft glow */
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(72, 167, 219, 0.7); /* Stronger glow */
-    }
-}
-/* ========== Media Queries for Responsiveness ========== */
-
-/* Mobile Styles (max-width: 768px) */
-@media (max-width: 768px) {
-    /* Adjust Heading Sizes */
-    h1 {
-        font-size: 2.5rem; /* Smaller heading */
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Smaller subheading */
-    }
-
-    /* Adjust Contact Button */
-    .contact-button {
-        padding: 8px 16px;
-        font-size: 0.9rem; /* Slightly smaller text */
-    }
-
-    /* Container Adjustments */
-    .container {
-        padding: 0 15px; /* Ensure space around content */
-    }
-
-    /* Adjust Section Padding */
-    section {
-        padding: 40px 0; /* Less padding for smaller screens */
-    }
-
-    /* Adjust Logo Size */
-    .logo {
-        height: 80px;
-        width: 80px;
-    }
-
-    /* Adjust Image Size (Deity Picture) */
-    .deity-picture {
-        max-width: 100%;
-        margin-top: 15px;
-    }
-}
-
-/* Tablet Styles (max-width: 1024px) */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 3rem; /* Slightly larger for tablet view */
-    }
-
-    h2 {
-        font-size: 1.75rem; /* Adjust for readability */
-    }
-
-    /* Adjust Contact Button */
-    .contact-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    /* Layout Adjustments for Tablets */
-    .container {
-        padding: 0 30px; /* More room on the sides */
-    }
-
-    section {
-        padding: 50px 0;
-    }
-
-    /* Adjust Image (Deity Picture) */
-    .deity-picture {
-        max-width: 90%; /* Allow larger images */
-    }
-}
-
-/* Desktop Styles (min-width: 1025px) */
-@media (min-width: 1025px) {
-    /* Desktop-specific Styles */
-    h1 {
-        font-size: 3.5rem; /* Larger text for desktop */
-    }
-
-    h2 {
-        font-size: 2rem; /* Adjust for larger screens */
-    }
-
-    /* Contact Button Styling */
-    .contact-button {
-        padding: 12px 24px;
-        font-size: 1.1rem; /* Adjust font size */
-    }
-
-    section {
-        padding: 70px 0; /* Larger sections on desktop */
-    }
-
-    /* Adjust Layout for Larger Screens */
-    .container {
-        max-width: 1200px; /* Ensure content doesn't stretch too wide */
-    }
-}
-/* General Section Styling */
-section {
-    padding: 40px 10px;
-    background: linear-gradient(135deg, #f3f4f8, #e9f7fe);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    animation: fadeInSection 1.5s ease-out;
-    text-align: center; /* Centering text for better appearance */
-    color: #333; /* Ensuring good contrast for text */
-}
-
-/* Text Styling for Section */
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+/* ========== General Styles ========== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 20px;
+/* ========== Header Styles ========== */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Section Animation */
-@keyframes fadeInSection {
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #666;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* ========== Button Styles ========== */
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: scaleEffect 3s infinite;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Keyframes for Animations ========== */
+@keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(10px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
-/* Responsive Styles for Sections */
-@media (max-width: 768px) {
-    section {
-        padding: 30px 10px; /* Adjust padding for smaller screens */
-    }
-
-    section h2 {
-        font-size: 1.8rem; /* Adjust font size for smaller screens */
-    }
-
-    section p {
-        font-size: 1rem; /* Adjust paragraph text size */
-        line-height: 1.5;
-    }
-}
-
-@media (max-width: 480px) {
-    section {
-        padding: 20px 10px; /* Less padding for very small screens */
-    }
-
-    section h2 {
-        font-size: 1.5rem; /* Smaller heading size */
-    }
-
-    section p {
-        font-size: 0.9rem; /* Smaller text for readability */
-    }
-}
-
-/* Optional Hover Effect for Sections */
-section:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly enhanced shadow on hover */
-    transform: translateY(-5px); /* Make the section pop on hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-/* Logo Styling */
-.logo {
-    height: 90px;
-    width: 90px;
-    animation: pulseLogo 2s ease-in-out infinite;
-    border-radius: 50%; /* Circle shape for logo */
-    background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
-}
-
-/* Pulse Animation for Logo */
-@keyframes pulseLogo {
+@keyframes scaleEffect {
     0%, 100% {
         transform: scale(1);
     }
@@ -1344,331 +431,291 @@ section:hover {
     }
 }
 
-/* Logo Hover Effect */
-.logo:hover {
-    transform: scale(1.15); /* Slightly larger on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-}
-/* Navigation Styling */
-nav ul {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    margin-top: 30px;
-    padding: 0;
-    list-style: none; /* Remove list styling */
-    display: none; /* Initially hidden */
-}
+/* ========== Media Queries for Responsiveness ========== */
 
-nav ul li {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-nav ul.active {
-    display: flex; /* Display the menu when active */
-    animation: slideIn 0.3s ease-out; /* Add a smooth sliding effect */
-}
-
-/* Menu Toggle Button */
-nav .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 2.5rem;
-    color: #4CAF50;
-    margin-top: 15px;
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
-}
-
-/* Toggle Animation */
-nav .menu-toggle:hover {
-    transform: rotate(90deg); /* Rotate the toggle icon when hovered */
-}
-
-/* Slide-in Effect for Menu */
-@keyframes slideIn {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-/* Contact Section Styling */
-.contact-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-form-container {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-}
-
-.contact-form-container h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.contact-form-container p {
-    font-size: 1.1rem;
-    text-align: center;
-    color: #777;
-}
-
-.contact-input,
-.contact-button {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1.1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow here for consistency */
-}
-
-/* Focus styles for inputs and buttons */
-.contact-input:focus,
-.contact-button:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
-    transform: scale(1.02);
-}
-
-/* Contact Button */
-.contact-button {
-    background-color: #4CAF50;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-}
-
-.contact-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-/* Animation for floating effect */
-@keyframes floatEffect {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-.contact-input,
-.contact-button {
-    animation: floatEffect 3s ease-in-out infinite;
-}
-/* Desktop Styles (min-width: 769px) */
-@media (min-width: 769px) {
-    /* Main Title Styling */
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
     h1 {
-        font-size: 3rem; /* Larger heading for desktop */
+        font-size: 2.5rem;
     }
 
-    /* Subheading Styling */
     h2 {
-        font-size: 2.5rem; /* Adjusted size for a larger, clearer look */
+        font-size: 1.5rem;
     }
 
-    /* Contact Button Styling */
     .contact-button {
-        padding: 12px 24px; /* Increased padding for more prominent buttons */
-        font-size: 1rem; /* Standard font size for desktop */
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 
-    /* Contact Form Section */
-    .contact-section {
-        padding: 40px 20px; /* More spacious padding for desktop */
-    }
-
-    /* Input Fields and Buttons */
-    .contact-input,
-    .contact-button {
-        font-size: 1.1rem; /* Increased font size for better readability */
-        padding: 14px; /* Slightly larger padding for more touch-friendly buttons */
-    }
-}
-/* General Section Styling */
-section {
-    padding: 60px 30px; /* Increased padding for a more spacious layout */
-    background: linear-gradient(135deg, #f3f4f8, #e9f7fe); /* Adds a soft gradient background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border-radius: 15px; /* Rounded corners for a modern look */
-    animation: fadeInSection 1.5s ease-out; /* Fade-in animation on section load */
-}
-@media (max-width: 768px) {
+    /* General Section Styling */
     section {
-        padding: 40px 20px; /* Reduced padding for smaller screens */
+        padding: 40px 10px;
+        background: linear-gradient(135deg, #f3f4f8, #e9f7fe);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        animation: fadeInSection 1.5s ease-out;
     }
-}
-/* Typography Adjustments */
-h1 {
-    font-size: 3rem; /* Large title size */
-    color: #333; /* Dark gray color for good contrast */
-}
 
-h2 {
-    font-size: 2.5rem; /* Slightly smaller title */
-    color: #4CAF50; /* Green color for emphasis */
-}
-/* Logo Styling */
-.logo {
-    height: 120px; /* Sufficient size for the logo */
-    width: 120px;  /* Square shape */
-}
-h1, h2 {
-    font-weight: bold;
-}
-@media (max-width: 768px) {
+    @keyframes fadeInSection {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Typography Adjustments */
+    h1 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #4CAF50;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Logo Styling */
     .logo {
-        height: 100px;
-        width: 100px;
+        height: 90px;
+        width: 90px;
+        animation: pulseLogo 2s ease-in-out infinite;
+        border-radius: 15px;
     }
-}
-.logo {
-    display: block;
-    margin: 0 auto;
-}
-/* Navigation Styling */
-nav ul {
-    display: flex; /* Flexbox for horizontal alignment */
-    justify-content: space-around; /* Evenly spaces the list items */
-    margin-top: 20px; /* Adds spacing above the menu */
-}
 
-nav ul li {
-    margin: 0 15px; /* Horizontal spacing between menu items */
-}
+    @keyframes pulseLogo {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
 
-nav .menu-toggle {
-    display: none; /* Hides the menu toggle button */
-}
-@media (max-width: 768px) {
+    /* Navigation Styling */
     nav ul {
-        display: none; /* Hide the menu items on small screens */
-        flex-direction: column; /* Stack the items vertically */
-        margin-top: 10px; /* Adjust top margin */
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Initially hidden */
+        margin-top: 30px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
     }
 
     nav .menu-toggle {
-        display: block; /* Show the hamburger icon on small screens */
+        display: block;
         cursor: pointer;
+        font-size: 2.5rem;
+        color: #4CAF50;
+        margin-top: 15px;
     }
-}
-nav .menu-toggle {
-    font-size: 2.5rem;
-    color: #4CAF50;
-}
-nav ul {
-    transition: all 0.3s ease; /* Smooth transition when the menu is shown/hidden */
-}
-nav ul li a:hover {
-    color: #45a049; /* Change text color on hover */
-}
-/* Contact Section Styling */
-.contact-section {
-    display: flex;
-    flex-direction: column; /* Align children (form, inputs, button) vertically */
-    align-items: center; /* Center all elements horizontally */
-    justify-content: center; /* Vertically center */
-    padding: 40px;
-    background-color: #fff; /* White background for the section */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: all 0.3s ease; /* Smooth transition on hover */
-}
 
-.contact-section:hover {
-    transform: translateY(-5px); /* Slight raise effect on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-}
+    /* Contact Section Styling */
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+    }
 
-/* Form Container Styling */
-.contact-form-container {
-    width: 60%;
-    max-width: 600px; /* Limit the max width */
-    display: flex;
-    flex-direction: column; /* Stack form elements */
-    align-items: center; /* Center items */
-}
-
-/* Heading in Form */
-.contact-form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333; /* Dark color for text */
-}
-
-/* Input and Button Styling */
-.contact-input,
-.contact-button {
-    width: 100%; /* Make input/button full width */
-    padding: 12px;
-    margin: 12px 0;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd; /* Light border */
-    transition: all 0.3s ease; /* Smooth transitions on focus and hover */
-}
-
-/* Input Background */
-.contact-input {
-    background-color: #f9f9f9; /* Light background for inputs */
-}
-
-/* Focused Input Styles */
-.contact-input:focus {
-    outline: none;
-    border: 1px solid #4CAF50; /* Green border when focused */
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.6); /* Soft green glow */
-}
-
-/* Button Styling */
-.contact-button {
-    background-color: #4CAF50; /* Green background */
-    color: #fff; /* White text */
-    cursor: pointer; /* Pointer cursor on hover */
-    border: none;
-}
-
-/* Button Hover Effect */
-.contact-button:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
-    transform: scale(1.05); /* Button grows slightly on hover */
-}
-@media (max-width: 768px) {
     .contact-form-container {
-        width: 90%; /* Make it more compact on small screens */
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .contact-form-container h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .contact-form-container p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: #777;
+    }
+
+    .contact-input,
+    .contact-button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 1.1rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-input:focus,
+    .contact-button:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+        transform: scale(1.02);
+    }
+
+    .contact-button {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+    }
+
+    .contact-button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+    }
+
+    @keyframes floatEffect {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    .contact-input,
+    .contact-button {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        animation: floatEffect 3s ease-in-out infinite;
     }
 }
-.contact-input:focus {
-    transform: scale(1.02); /* Slight scale on focus */
-}
-.contact-button:active {
-    transform: scale(1); /* Reset scale on click */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-.contact-input::placeholder {
-    color: #bbb; /* Lighter color for placeholder text */
-    font-style: italic; /* Slightly italic for emphasis */
+
+/* Desktop Styles (min-width: 769px) */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    /* General Section Styling */
+    section {
+        padding: 60px 30px;
+    }
+
+    /* Typography Adjustments */
+    h1 {
+        font-size: 3rem;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        color: #4CAF50;
+    }
+
+    /* Logo Styling */
+    .logo {
+        height: 120px;
+        width: 120px;
+    }
+
+    /* Navigation Styling */
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav .menu-toggle {
+        display: none;
+    }
+
+    /* Contact Section Styling */
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .contact-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-form-container {
+        width: 60%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .contact-input,
+    .contact-button {
+        width: 100%;
+        padding: 12px;
+        margin: 12px 0;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+
+    .contact-input {
+        background-color: #f9f9f9;
+    }
+
+    .contact-input:focus {
+        outline: none;
+        border: 1px solid #4CAF50;
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+    }
+
+    .contact-button {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+    }
+
+    .contact-button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+    }
 }
