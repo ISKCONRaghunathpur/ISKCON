@@ -367,10 +367,87 @@ ul li:nth-child(even) {
     }
 }
 
-/* Media Queries for Responsiveness */
+/* ========== General Styles ========== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ========== Header Styles ========== */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #666;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* ========== Button Styles ========== */
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: scaleEffect 3s infinite;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Keyframes for Animations ========== */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleEffect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ========== Media Queries for Responsiveness ========== */
 
 /* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
     /* General Section Styling */
     section {
         padding: 40px 10px;
@@ -527,6 +604,19 @@ ul li:nth-child(even) {
 
 /* Desktop Styles (min-width: 769px) */
 @media (min-width: 769px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
     /* General Section Styling */
     section {
         padding: 60px 30px;
