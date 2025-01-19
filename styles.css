@@ -371,7 +371,7 @@ ul li:nth-child(even) {
 
 /* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Adjust section padding */
+    /* General Section Styling */
     section {
         padding: 40px 10px;
         background: linear-gradient(135deg, #f3f4f8, #e9f7fe);
@@ -380,7 +380,6 @@ ul li:nth-child(even) {
         animation: fadeInSection 1.5s ease-out;
     }
 
-    /* Add animation for sections */
     @keyframes fadeInSection {
         0% {
             opacity: 0;
@@ -392,7 +391,7 @@ ul li:nth-child(even) {
         }
     }
 
-    /* Adjust font size for mobile */
+    /* Typography Adjustments */
     h1 {
         font-size: 2rem;
         color: #333;
@@ -408,7 +407,7 @@ ul li:nth-child(even) {
         margin-top: 10px;
     }
 
-    /* Adjust logo size for mobile */
+    /* Logo Styling */
     .logo {
         height: 90px;
         width: 90px;
@@ -416,7 +415,6 @@ ul li:nth-child(even) {
         border-radius: 15px;
     }
 
-    /* Add pulse animation to logo */
     @keyframes pulseLogo {
         0%, 100% {
             transform: scale(1);
@@ -426,11 +424,11 @@ ul li:nth-child(even) {
         }
     }
 
-    /* Stack navigation links vertically */
+    /* Navigation Styling */
     nav ul {
         flex-direction: column;
         align-items: center;
-        display: none; /* Initially hide */
+        display: none; /* Initially hidden */
         margin-top: 30px;
     }
 
@@ -442,7 +440,6 @@ ul li:nth-child(even) {
         display: flex;
     }
 
-    /* Mobile Menu Icon */
     nav .menu-toggle {
         display: block;
         cursor: pointer;
@@ -451,11 +448,40 @@ ul li:nth-child(even) {
         margin-top: 15px;
     }
 
-    /* Contact section - make it cute and engaging */
+    /* Contact Section Styling */
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+    }
+
+    .contact-form-container {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .contact-form-container h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .contact-form-container p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: #777;
+    }
+
     .contact-input,
     .contact-button {
         width: 100%;
-        max-width: 100%;
         padding: 12px;
         margin: 10px 0;
         border-radius: 8px;
@@ -476,19 +502,11 @@ ul li:nth-child(even) {
         color: #fff;
         cursor: pointer;
         border: none;
-        transition: background-color 0.3s, transform 0.3s;
     }
 
     .contact-button:hover {
         background-color: #45a049;
         transform: scale(1.05);
-    }
-
-    /* Add a floating effect to inputs and buttons */
-    .contact-input,
-    .contact-button {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        animation: floatEffect 3s ease-in-out infinite;
     }
 
     @keyframes floatEffect {
@@ -500,47 +518,21 @@ ul li:nth-child(even) {
         }
     }
 
-    /* Contact section container */
-    .contact-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        margin-top: 30px;
-    }
-
-    /* Add smooth transition to form container */
-    .contact-form-container {
-        width: 90%;
-        max-width: 500px;
-    }
-
-    .contact-form-container h2 {
-        text-align: center;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    .contact-form-container p {
-        font-size: 1.1rem;
-        text-align: center;
-        color: #777;
+    .contact-input,
+    .contact-button {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        animation: floatEffect 3s ease-in-out infinite;
     }
 }
 
 /* Desktop Styles (min-width: 769px) */
 @media (min-width: 769px) {
-    /* Adjust section padding */
+    /* General Section Styling */
     section {
         padding: 60px 30px;
     }
 
-    /* Adjust font size for desktop */
+    /* Typography Adjustments */
     h1 {
         font-size: 3rem;
         color: #333;
@@ -551,13 +543,13 @@ ul li:nth-child(even) {
         color: #4CAF50;
     }
 
-    /* Logo size for desktop */
+    /* Logo Styling */
     .logo {
         height: 120px;
         width: 120px;
     }
 
-    /* Navigation Menu */
+    /* Navigation Styling */
     nav ul {
         display: flex;
         justify-content: space-around;
@@ -572,7 +564,7 @@ ul li:nth-child(even) {
         display: none;
     }
 
-    /* Contact Section */
+    /* Contact Section Styling */
     .contact-section {
         display: flex;
         flex-direction: column;
@@ -585,13 +577,11 @@ ul li:nth-child(even) {
         transition: all 0.3s ease;
     }
 
-    /* Add hover effect to the contact form */
     .contact-section:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     }
 
-    /* Contact Form Styling */
     .contact-form-container {
         width: 60%;
         max-width: 600px;
@@ -609,7 +599,6 @@ ul li:nth-child(even) {
     .contact-input,
     .contact-button {
         width: 100%;
-        max-width: 100%;
         padding: 12px;
         margin: 12px 0;
         font-size: 1rem;
@@ -633,7 +622,6 @@ ul li:nth-child(even) {
         color: #fff;
         cursor: pointer;
         border: none;
-        transition: background-color 0.3s, transform 0.3s;
     }
 
     .contact-button:hover {
